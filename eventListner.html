@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#bus{
+			width: 200px;
+			height: 200px;
+		    position: absolute;
+			background-image: url(https://cdn.dribbble.com/userupload/10722066/file/original-83cca3bdc1a165f7af53d372f11ce482.gif);
+			background-size: contain;
+		    background-repeat: no-repeat ;
+
+
+		}
+	</style>
+</head>
+<body>
+
+	<div id="bus"></div>
+
+	<script type="text/javascript">
+
+		bus.style.left="0px"
+		
+		document.addEventListener("keypress", function(){
+			console.log(bus.style.left)
+			bus.style.left= parseInt(bus.style.left) + 10+"px"
+		})
+	</script>
+
+</body>
+</html>

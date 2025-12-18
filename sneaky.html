@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#sneaky{
+			width: 1000px;
+			height: 1000px;
+			position: absolute;
+		    background-image: url(https://i.pinimg.com/originals/46/cc/99/46cc99e8ad4a6ba8e735ba2e3cda8691.gif);	
+			background-size: contain;
+		    background-repeat: no-repeat
+		}
+	</style>
+</head>
+<body>
+	<div id="sneaky"></div>
+	<script type="text/javascript">
+
+		sneaky.style.left= "0px"
+		// sneaky.style.right="0px"
+
+
+
+		document.addEventListener("keydown", function(event){
+			console.log(event)
+			if(event.keyCode==39)
+			{
+			console.log(sneaky.style.left)
+			sneaky.style.left= parseInt(sneaky.style.left) + 10+"px"
+			}
+
+			if(event.keyCode==37){
+			console.log(sneaky.style.left)
+			sneaky.style.left= parseInt(sneaky.style.left) - 10+"px"
+			}
+		})
+	
+
+	sneaky.addEventListener("click", function(){
+			sneaky.style.opacity= "0.3"
+		})
+	
+
+		
+	</script> 
+</body>
+</html>
