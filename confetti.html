@@ -1,0 +1,42 @@
+<html> <!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	.littles{
+		width: 85px;
+		height: 67px;
+		border: 1px solid black;
+		display: inline-block;
+
+	}
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function makeConfetti(){
+
+	let confetti = document.createElement("div")
+	confetti.classList.add("littles")
+	document.body.appendChild(confetti)
+
+	let r= Math.round(Math.random()*255)
+	let b= Math.round(Math.random()*255)
+	let g= Math.round(Math.random()*255)
+
+	confetti.style.backgroundColor="rgb("+ r +","+ g+","+ b+ ")"
+
+}
+
+
+setInterval(makeConfetti,.5)
+
+</script>
+
+
+
+</body>
+
+
+</html>
