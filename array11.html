@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #picker {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #variant-img {
+      width: 250px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <div id="picker">
+      which Invincible variant will you get
+    </div>
+
+    <div id="result">
+      <img id="variant-img" src="" alt="">
+      <p id="variant-name"></p>
+    </div>
+  </center>
+
+  <script>
+    const variants = [
+      { name: "Whatsapp Mark", img: "whatsappmark.jpg" },
+      { name: "Sinister Mark", img: "sinistermark.gif" },
+      { name: "No Goggles Mark", img: "nogogglesmark.webp" },
+      { name: "Full Mask Mark", img: "fullmaskmark.jpeg" },
+      { name: "Omni Mark", img: "omnimark.jpeg" },
+      { name: "Mohawk Mark", img: "prisonermark.jpeg" },
+      { name: "Prisoner Mark", img: "prisonermarkpicture.webp" },
+      { name: "Base Mark", img: "invinciblebasic.gif" },
+      { name: "No Unopan is that strong", img: "allenthealien.webp" }
+    ];
+
+    const picker = document.getElementById("picker");
+    const img = document.getElementById("variant-img");
+    const name = document.getElementById("variant-name");
+
+    picker.addEventListener("click", () => {
+      const x = Math.floor(Math.random() * variants.length);
+      img.src = variants[x].img;
+      img.alt = variants[x].name;
+      name.textContent = variants[x].name;
+    });
+  </script>
+</body>
+</html>
